@@ -3,10 +3,10 @@ require_relative "../lib/solver"
 
 class SolverTest < Minitest::Test
   def test_it_solves_puzzle
-    skip
     puzzle   = File.read("test/puzzle1.txt").strip
     solution = File.read("test/puzzle1_solution.txt").strip
-    assert_equal solution, Solver.new(puzzle).solve
+    solver = Solver.new(puzzle)
+    assert_equal solution, solver.solve
   end
 
   def test_it_gets_square
