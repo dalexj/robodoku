@@ -1,6 +1,7 @@
 require_relative "board"
 
 class Solver
+
   def self.solve(input)
     Board.solve(input)
   end
